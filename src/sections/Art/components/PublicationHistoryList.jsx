@@ -3,20 +3,22 @@ export default function PublicationHistoryList({ art }) {
 
     return (
 
-        <>
 
         <ul>
-            {art.PublicationHistoryList.map((history, index) => (
+            {art?.publicationHistory?.length > 0 ? (
+            art.publicationHistory.map((history, index) => (
             <li key={index}>{history}</li> 
             ))
 
+    ) : (
+        <li>No history available</li>
             
-            }
+            )}
         </ul>
 
         
         
         
-        </>
+        
     )
 }

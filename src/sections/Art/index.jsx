@@ -7,12 +7,11 @@ function ArtsSection() {
 
   const [art, setArt] = useState([])
 
-  useEffect(() => {
+  useEffect( () => {
     const fetchusers = async () => {
     try {
       const response = await fetch(url)
       const data = await response.json();
-      console.log(data)
       setArt(data)
     }
     catch(error){
@@ -31,7 +30,7 @@ function ArtsSection() {
       <h2>Arts Section</h2>
       <div className="scroll-container">
         <ul className="art-list">
-        <ArtList artList={art}/>
+        <ArtList art={art}/>
         </ul>
         
       </div>

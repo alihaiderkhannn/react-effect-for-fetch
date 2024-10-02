@@ -8,7 +8,9 @@ export default function ArtListItem({art, index}) {
 
         <div className="frame">
 
-        <img src={`https://boolean-api-server.fly.dev${art.imageURL}`}/>
+        <img src={`https://boolean-uk-api-server.fly.dev${art.imageURL}`}
+        />
+        
 
         </div>
 
@@ -18,7 +20,7 @@ export default function ArtListItem({art, index}) {
 
         <h4>Publication History:</h4>
 
-        <PublicationHistoryList publichistorylist={art}/>
+        <PublicationHistoryList art={art}/>
         
 
         </li>
